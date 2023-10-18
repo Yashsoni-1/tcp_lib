@@ -51,6 +51,7 @@ void tcp_client_service_manager::tcp_start_svc_manager_thread_internal()
                 
                 if(rcv_bytes == 0) {
                     std::cout << "Errno no = " << errno << '\n';
+                    sleep(1);
                 }
                 
                 if(tcp_clnt->msgd) {
@@ -64,7 +65,7 @@ void tcp_client_service_manager::tcp_start_svc_manager_thread_internal()
                 }
             }
             
-            memset(client_recv_buffer, 0, MAX_CLIENT_BUFFER_SIZE);
+            memset(client_recv_buffer, 0, rcv_bytes);
             
         }
     }
