@@ -7,6 +7,10 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 
+struct test_struct {
+    int a, b;
+};
+
 static void print_client(const tcp_client *tcp_clnt)
 {
     
