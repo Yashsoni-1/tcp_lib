@@ -4,6 +4,7 @@
 #include "tcp_client.hpp"
 #include "tcp_server_controller.hpp"
 #include "tcp_msg_demarcar.hpp"
+#include <unistd.h>
 
 
 unsigned char client_recv_buffer[MAX_CLIENT_BUFFER_SIZE];
