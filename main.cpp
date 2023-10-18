@@ -37,6 +37,8 @@ static void appln_client_disconnected(const tcp_server_controller *tcp_svr, cons
 static void appln_client_msg_recvd(const tcp_server_controller *tcp_svr, const tcp_client *tcp_clnt, unsigned char *msg, uint16_t msg_size)
 {
     std::cout << __FUNCTION__ << "() Bytes recvd: " << msg_size << " msg: " << msg << '\n';
+    test_struct *t_s = (test_struct *)msg;
+    std::cout << "a = " << t_s->a << " and b = " << t_s->b << '\n';
 }
 
 int main(int argc, const char * argv[]) {
