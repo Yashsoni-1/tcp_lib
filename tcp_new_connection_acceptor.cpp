@@ -78,7 +78,7 @@ void tcp_new_connection_acceptor::start_tcp_new_connection_acceptor_thread_inter
             this->tcp_svr_ctrlr->client_connected(this->tcp_svr_ctrlr, tcp_clnt);
         }
         
-        tcp_clnt->msgd = new tcp_msg_fixed_size_demarcar(25);
+        tcp_clnt->msgd = new tcp_msg_fixed_size_demarcar(27);
         
         this->tcp_svr_ctrlr->process_new_client(tcp_clnt);
         
