@@ -10,6 +10,9 @@ Complete multithreaded TCP library/server built in C++ over POSIX.
 5. To handle concurrency using mutex.
 6. To apply the TCP demarcation.
 7. To build socket programming C++ library over POSIX.
+8. Applications can create unlimited number of TCP servers.
+9. Applications can increemently build more protocol over this library.
+    
 
 ## DESCRIPTION
 Created multithreaded TCP library/server in C++ over POSIX. This is a simple tcp server which is made with the tcp_lib(one of my previous project). This server/library can simultaneously accept new client and listen to existing client. This library consists of one database and two threads excluding main. Let us call one thread as CAS(connection accepting service) and other as DRS(data request service). All the connected clients are stored in DBM(central database). All these three entities are managed and controlled by central entity TCP_SERVER_CONTROLLER, let us call it TCS. Thread CAS is fully dedicated to accept the new connection request and notify the TCS about the new client. TCS store these clients in DBM. Thread DRS is fully dedicated to listen to these connected clients. 
